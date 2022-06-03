@@ -1,0 +1,79 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    @if(UserManager.GetUserName(User).Equals("administrador@gmail.com"))//contra Admin12%
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i>Inicio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs"><i class="fas fa-star"></i>Nosotros</a>
+       </li>
+            <li class="nav-item text-dark dropdown">
+                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-address-book"></i>Contacto</a>
+                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                       <li><a class="nav-link text-dark" asp-area="" asp-controller="Contact" asp-action="Create">Registrar Contacto</a></li>
+                      <li><a class="nav-link text-dark" asp-area="" asp-controller="Contact" asp-action="Index">Mostrar Contactos</a>
+                       </li>
+                    </ul>
+             </li>
+
+            <li class="nav-item text-dark dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-bed"></i>Habitaciones</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Create">Registrar Habitación</a></li>
+                    <li><a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index">Mostrar Habitaciones</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item text-dark dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-bed"></i>Servicios</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="nav-link text-dark" asp-area="" asp-controller="Services" asp-action="Create">Registrar Servicio</a></li>
+                    <li><a class="nav-link text-dark" asp-area="" asp-controller="Services" asp-action="Index">Mostrar Servicios</a></li>
+                </ul>
+            </li>  
+
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Pago" asp-action="Index"><i class="fas fa-hand-holding-usd"></i>Pagos</a>
+       </li>         
+            
+        }
+else{ 
+    <!--Usuario: ygm641@gmail.com / Contraseña: Yaraliz123%-->
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i>Inicio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs"><i class="fas fa-star"></i>Nosotros</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Catalogo" asp-action="Index"><i class="fas fa-luggage-cart"></i>Reservas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Servicios" asp-action="Index"><i class="fas fa-concierge-bell"></i>Servicios</a>
+        </li>
+        <li class="nav-item">
+                <a class="nav-link text-dark bi bi-cart" asp-area="" asp-controller="Proforma" asp-action="Index"><i class="fas fa-cart-plus"></i>Carrito</a>
+            </li>
+}
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i>Inicio</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs"><i class="fas fa-star"></i>Nosotros</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Catalogo" asp-action="Index"><i class="fas fa-luggage-cart"></i>Reservas</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Servicios" asp-action="Index"><i class="fas fa-concierge-bell"></i>Servicios</a>
+    </li>
+
+}

@@ -1,0 +1,79 @@
+@model hostal.Models.Pago
+@{
+    ViewData["Title"] = "Pago";
+}
+<!--Inicio Banner-->
+<div class="hero-wrap hero-wrap-2" style="background-image: url('../images/banner1.jpg'); background-attachment:fixed; height: 400px;">
+      <div class="overlay" style="height: 400px;" ></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true" style="height: 400px;">
+           <div class="col-md-8 ftco-animate text-center">          
+             <h1 class="mb-3 bread">Realizar pago</h1>
+            </div>
+          </div>
+       </div>
+</div>    
+<!--Fin Banner-->
+<br>
+<br>
+<br>
+
+    <div class="container formulario">
+
+        <div class="row">
+          <div class="col-sm-10 mt-5">
+           <form asp-controller="Pago" asp-action="Pagar">
+             
+              <div class="form-group row">
+                <input type="hidden" asp-for="UserID"/>
+                <div class="col-sm-2">
+                  <label asp-for="NombreTarjeta" class="control-label"></label>
+                </div>
+                <div class="col-sm-2">
+                  <input asp-for="NombreTarjeta" class="form-control rounded-pill" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-2">
+                  <label asp-for="NumeroTarjeta" class="control-label"></label>
+                </div>
+                <div class="col-sm-2">
+                  <input asp-for="NumeroTarjeta" class="form-control rounded-pill" data-inputmask="'mask': '9999-9999-9999-9999'" />
+                </div>
+              </div>              
+              <div class="form-group row">
+                <div class="col-sm-2">
+                  <label asp-for="DueDateYYMM" class="control-label"></label>
+                </div>
+                <div class="col-sm-2">
+                  <input asp-for="DueDateYYMM" class="form-control rounded-pill" data-inputmask="'mask': '99/99', 'placeholder': 'yy/mm'" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-2">
+                  <label asp-for="Cvv" class="control-label"></label>
+                </div>
+                <div class="col-sm-2">
+                  <input asp-for="Cvv" class="form-control rounded-pill" data-inputmask="'mask': '999', 'placeholder': '999'" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-2">
+                  <label asp-for="MontoTotal" class="control-label"></label>
+                </div>
+                <div class="col-sm-2">
+                  <input asp-for="MontoTotal" class="form-control rounded-pill" data-thousands="," readonly />
+                </div>
+              </div>  
+              <div class="form-group row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2">
+                  <button type="submit" class="button">Pagar</button> 
+                </div>
+              </div>
+            </form>
+           <h1>@ViewData["Message"]</h1>
+             
+          </div>
+        </div>
+    </div

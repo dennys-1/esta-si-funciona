@@ -1,0 +1,56 @@
+@model IEnumerable<hostal.Models.Servicios>
+
+@{
+    ViewData["Title"] = "Servicios";  
+}
+
+<!--Inicio Banner-->
+<div class="hero-wrap hero-wrap-2" style="background-image: url('../images/banner1.jpg'); background-attachment:fixed; height: 400px;">
+      <div class="overlay" style="height: 400px;" ></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true" style="height: 400px;">
+           <div class="col-md-8 ftco-animate text-center">          
+             <h1 class="mb-3 bread">Servicios</h1>
+            </div>
+          </div>
+       </div>
+</div>    
+<!--Fin Banner-->
+<br>
+<br>
+<br>
+
+  <div class="container">
+    <h1>@ViewData["Message"]</h1>
+    <div class="row">
+      <div class="col">
+        <div id="servicios" class="mb-3">
+          <div class="row">
+            @foreach (var item in Model) {
+               if(item.Id==0){     
+
+
+              }else{
+            <div class="col-sm-4">
+              <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-body">
+                  <div class="card-img-actions">
+                    <img class="img-responsive" width="230" height="200"
+                       src="/images/@item.Imagen" alt="@item.Imagen"  />
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
+                  <p class="card-text">@Html.DisplayFor(modelItem => item.Precio)</p>
+                  <a class="btn btn-success" asp-action="Add" asp-route-id="@item.Id">Agregar</a>
+                  <a class="btn btn-success" asp-action="Details" asp-route-id="@item.Id">Detalles</a>
+                </div>
+              </div>
+            </div>
+            }
+            }
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
