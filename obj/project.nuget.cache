@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vKCrkL+m6rgTQ33LXIvPSJ4LCcTDonc+SCSxPYUFuFoelf0UWniZqFeZ1LiBG0RQKe7BN8//QvoKEMuhbN5tZw==",
+  "dgSpecHash": "teoUOLDcCBQvjJmoL0Utf+WcOdQmF32PQrzC7TrzEYugMQmJwBrVI3+JCd2zZmG8mM5iB8C2esuOPZsMHK39Ng==",
   "success": true,
-  "projectFilePath": "d:\\VERSION FINAL HTC\\esta-si-funciona\\hostal.csproj",
+  "projectFilePath": "D:\\VERSION FINAL HTC\\esta-si-funciona\\hostal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Armando\\.nuget\\packages\\anglesharp\\0.9.9\\anglesharp.0.9.9.nupkg.sha512",
     "C:\\Users\\Armando\\.nuget\\packages\\epplus\\4.5.3.3\\epplus.4.5.3.3.nupkg.sha512",

@@ -36,6 +36,8 @@ namespace hostal.Data
             public DbSet<hostal.Models.Pagoyape> DataPagoyape { get; set; }
             public DbSet<hostal.Models.Pedidoyape> DataPedidoyape { get; set; }
             public DbSet<hostal.Models.DetallePedidoyape> DataDetallePedidoyape { get; set; }
+            public DbSet<hostal.Models.Cancelar> DataCancelar { get; set; }
+            public DbSet<hostal.Models.Reclamos> DataReclamos { get; set; }
 
         }
 

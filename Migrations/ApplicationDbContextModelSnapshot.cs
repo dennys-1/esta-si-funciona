@@ -217,6 +217,35 @@ namespace hostal.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("hostal.Models.Cancelar", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("Estado")
+                        .HasColumnType("text")
+                        .HasColumnName("Estado");
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("timestamp without time zone")
+                        .HasColumnName("Fecha");
+
+                    b.Property<string>("Motivo")
+                        .HasColumnType("text")
+                        .HasColumnName("Motivo");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("text")
+                        .HasColumnName("Nombre");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("t_cancelar");
+                });
+
             modelBuilder.Entity("hostal.Models.Contact", b =>
                 {
                     b.Property<int>("Id")
@@ -644,6 +673,37 @@ namespace hostal.Migrations
                     b.HasIndex("ProformaServiId");
 
                     b.ToTable("t_proformass");
+                });
+
+            modelBuilder.Entity("hostal.Models.Reclamos", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("Apellido")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Correo")
+                        .HasColumnType("text");
+
+                    b.Property<int>("Dni")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("N_Celular")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Nombres")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Reclamo")
+                        .HasColumnType("text");
+
+                    b.HasKey("id");
+
+                    b.ToTable("L_Reclamos");
                 });
 
             modelBuilder.Entity("hostal.Models.Servicios", b =>

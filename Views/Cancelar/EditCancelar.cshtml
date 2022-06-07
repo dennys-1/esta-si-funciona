@@ -1,0 +1,45 @@
+@model hostal.Models.Cancelar
+
+@{
+    ViewData["Title"] = "Cancelar";
+}
+<!--Inicio Banner-->
+<div class="hero-wrap hero-wrap-2" style="background-image: url('../images/banner1.jpg'); background-attachment:fixed; height: 400px;">
+      <div class="overlay" style="height: 400px;" ></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true" style="height: 400px;">
+           <div class="col-md-8 ftco-animate text-center">          
+             <h1 class="mb-3 bread">Validad Cancelación</h1>
+            </div>
+          </div>
+       </div>
+</div>    
+<!--Fin Banner-->
+<br>
+<br>
+<br>
+<div class="container formulario">
+     <div class="col-md-4">
+        <form asp-action="EditCancelar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+          
+            <div class="form-group text-left col-sm">
+                <label asp-for="Estado" class="control-label"></label>
+                <select asp-for="Estado" class="form-control rounded-pill" aria-label="Default select example">
+                <option value="Aceptado">Aceptado</option>
+                <option value="Rechazado">Rechazado</option>
+                </select>
+                <span asp-validation-for="Estado" class="text-danger"></span>
+            </div>
+
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Validar" class="button" />
+            </div>
+            <br>
+            <div>
+            <a asp-action="ListarCancelar"><i class="fas fa-arrow-circle-left"></i>Regresar</a>
+            </div>
+        </form>
+    </div>
+</div>
