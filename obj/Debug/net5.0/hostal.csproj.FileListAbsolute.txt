@@ -3930,3 +3930,5 @@ D:\VERSION FINAL HTC\esta-si-funciona\obj\Debug\net5.0\Razor\Views\Reclamos\Inde
 D:\VERSION FINAL HTC\esta-si-funciona\obj\Debug\net5.0\Razor\Views\Reclamos\ListarReclamo.cshtml.g.cs
 D:\VERSION FINAL HTC\esta-si-funciona\obj\Debug\net5.0\Razor\Views\Cancelar\EditCancelar.cshtml.g.cs
 D:\VERSION FINAL HTC\esta-si-funciona\obj\Debug\net5.0\Razor\Views\Cancelar\ListarCancelar.cshtml.g.cs
+D:\VERSION FINAL HTC\esta-si-funciona\obj\Debug\net5.0\Razor\Views\Catalogo\Acompañante.cshtml.g.cs
+D:\VERSION FINAL HTC\esta-si-funciona\obj\Debug\net5.0\Razor\Views\Servicios\Acompañante.cshtml.g.cs

@@ -20,6 +20,10 @@ namespace hostal.Controllers
             _context = context;
             _userManager = userManager;
         }
+            public IActionResult Acompañante()
+        {
+            return View();
+        }
 
         public async Task<IActionResult> Index()
         {
