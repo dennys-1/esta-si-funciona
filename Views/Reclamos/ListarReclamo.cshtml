@@ -1,0 +1,73 @@
+@model IEnumerable<hostal.Models.Reclamos>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!--Inicio Banner-->
+<div class="hero-wrap hero-wrap-2" style="background-image: url('../images/banner1.jpg'); background-attachment:fixed; height: 400px;">
+      <div class="overlay" style="height: 400px;" ></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true" style="height: 400px;">
+           <div class="col-md-8 ftco-animate text-center">          
+             <h1 class="mb-3 bread">Listar Reclamos</h1>
+            </div>
+          </div>
+       </div>
+</div>    
+<!--Fin Banner-->
+<br>
+<br>
+<br>
+<p>
+    <!--<a asp-action="Create">Crear Nuevo</a>-->
+</p>
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombres)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.N_Celular)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Correo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reclamo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.N_Celular)
+            </td>            
+            <td>
+                @Html.DisplayFor(modelItem => item.Correo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reclamo)
+            </td>
+            <td>                
+                                
+                <a asp-action="Delete" asp-route-id="@item.id" class="btn btn-outline-danger">Eliminar</a>
+            </td>
+        </tr>
+
+}
+    </tbody>
+</table>

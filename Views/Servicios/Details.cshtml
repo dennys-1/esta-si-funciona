@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Detalles";
 }
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 <style>
     a {
         color: #ffffff;
@@ -30,6 +31,12 @@
     .checked {
         color: orange;
     }
+    .rating-css input{
+        display: none;
+    }
+    .rating-css input:checked + label ~ label{
+        color: #838383;
+    }
 </style>
 <section id="catalogue" class="catalogue section-bg">
 <div class="container">
@@ -54,7 +61,29 @@
                   
                   <p class="card-text">@Html.DisplayFor(model => model.Descripcion)</p>
                   <h5 class="card-title">@Html.DisplayFor(model => model.Precio)</h5>
-                  
+                  <div class="rating-css">
+                    <div class="star-icon">
+                        <input type="radio" name="rate" id="rate-5">
+                        <label for="rate-5" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-4">
+                        <label for="rate-4" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-3">
+                        <label for="rate-3" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-2">
+                        <label for="rate-2" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-1">
+                        <label for="rate-1" class="fas fa-star"></label>
+                    </div>
+                  </div>
+                  <br>
+                  <hr>
+                  <div>
+                  <a class="btn btn-primary button" asp-action="Acompañante"></i>Acompañantes</a>
+                  </div>
+                  <br>
+                  <div>
+                  <a class="btn btn-primary button" asp-action="Index"></i>Regresar</a>
+                  </div>
                 </div>
         </div>
     </div>

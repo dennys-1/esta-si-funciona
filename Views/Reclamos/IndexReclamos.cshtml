@@ -1,0 +1,64 @@
+@model hostal.Models.Reclamos
+
+@{
+    ViewData["Title"] = "Reclamos";
+}
+<!--Inicio Banner-->
+<div class="hero-wrap hero-wrap-2" style="background-image: url('../images/banner1.jpg'); background-attachment:fixed; height: 400px;">
+      <div class="overlay" style="height: 400px;" ></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true" style="height: 400px;">
+           <div class="col-md-8 ftco-animate text-center">          
+             <h1 class="mb-3 bread">Solicitar reclamo</h1>
+            </div>
+          </div>
+       </div>
+</div>    
+<!--Fin Banner-->
+<br>
+<br>
+<br>
+<div class="container formulario">
+     <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nombres" class="control-label"></label>
+                <input asp-for="Nombres" class="form-control rounded-pill" placeholder="Escriba Nombre"/>
+                <span asp-validation-for="Nombres" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <label asp-for="Apellido" class="control-label"></label>
+                <input asp-for="Apellido" class="form-control rounded-pill" placeholder="Escriba Apellido"/>
+                <span asp-validation-for="Apellido" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="N_Celular" class="control-label"></label>
+                <input asp-for="N_Celular" class="form-control rounded-pill" placeholder="Escriba su número de celular"/>
+                <span asp-validation-for="N_Celular" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Correo" class="control-label"></label>
+                <input asp-for="Correo" class="form-control rounded-pill" placeholder="Escriba su correo"/>
+                <span asp-validation-for="Correo" class="text-danger"></span>
+            </div>
+            
+             <div class="form-group">
+                <label asp-for="Reclamo" class="control-label"></label>
+                <input asp-for="Reclamo" class="form-control rounded-pill" placeholder="Escriba su reclamo"/>
+                <span asp-validation-for="Reclamo" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Enviar" class="button" />
+            </div>
+            <br>
+            <div>
+            <a asp-action="Index"><i class="fas fa-arrow-circle-left"></i>Regresar</a>
+            </div>
+        </form>
+    </div>
+</div>

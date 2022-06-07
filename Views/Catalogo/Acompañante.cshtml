@@ -1,0 +1,53 @@
+@{
+    ViewData["Title"] = "Catalogo";
+}
+<!--Inicio Banner-->
+<div class="hero-wrap hero-wrap-2" style="background-image: url('../images/banner1.jpg'); background-attachment:fixed; height: 400px;">
+      <div class="overlay" style="height: 400px;" ></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true" style="height: 400px;">
+           <div class="col-md-8 ftco-animate text-center">          
+             <h1 class="mb-3 bread">Acompañantes</h1>
+            </div>
+          </div>
+       </div>
+</div>    
+<!--Fin Banner-->
+<br>
+<br>
+<br>
+<div class="container formulario">
+     <div class="col-md-4">
+        <form >
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label  class="control-label"></label>
+                <input  class="form-control rounded-pill" placeholder="Escriba su Nombre"/>
+                
+            </div>
+           
+            <div class="form-group">
+                <label  class="control-label"></label>
+                <input  class="form-control rounded-pill" placeholder="Escriba la edad"/>
+                
+            </div>
+
+             <div class="form-group">
+                <label  class="control-label"></label>
+                <input  class="form-control rounded-pill" placeholder="Escribe el parentesco"/>
+                
+            </div>
+
+            
+
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Enviar" class="button" />
+            </div>
+            <br>
+            <div>
+            <a asp-action="Index"><i class="fas fa-arrow-circle-left"></i>Regresar</a>
+            </div>
+        </form>
+    </div>
+</div>

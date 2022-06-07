@@ -42,7 +42,7 @@
 
                     <li class="nav-item text-dark dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false"><i class="fas fa-bed"></i>PAQUETES</a>
+                    aria-expanded="false"><i class="fas fa-bed"></i>Paquetes</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="nav-link text-dark" asp-area="" asp-controller="Paquetes" asp-action="Create">Registrar Paquetes</a></li>
                             <li><a class="nav-link text-dark" asp-area="" asp-controller="Paquetes" asp-action="ListarPaquetes">Mostrar Paquetes</a>
@@ -52,12 +52,22 @@
 
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Pago" asp-action="Index"><i
-                        class="fas fa-hand-holding-usd"></i>Pagos</a>
+                        class="fas fa-bed"></i>Pagos</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Postergacion" asp-action="Listarpostergacion"><i
-                        class="fas fa-hand-holding-usd"></i>POSTERGACIONES</a>
+                        class="fas fa-bed"></i>Postergaciones</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Cancelar" asp-action="ListarCancelar"><i
+                        class="fas fa-bed"></i>Cancelaciones</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Reclamos" asp-action="ListarReclamo"><i
+                        class="fas fa-bed"></i>Reclamos</a>
                     </li>
                     
         }
@@ -77,10 +87,16 @@
             <a class="nav-link text-dark" asp-area="" asp-controller="Paquetes" asp-action="Index"><i class="fas fa-concierge-bell"></i>PAQUETES</a>
         </li>
         <li class="nav-item">
-                <a class="nav-link text-dark bi bi-cart" asp-area="" asp-controller="Proforma" asp-action="Index"><i class="fas fa-cart-plus"></i>Carrito</a>
+                <a class="nav-link text-dark" asp-area="" asp-controller="Proforma" asp-action="Index"><i class="fas fa-cart-plus"></i>Carrito</a>
         </li>
         <li class="nav-item">
-                <a class="nav-link text-dark bi bi-cart" asp-area="" asp-controller="Postergacion" asp-action="Indexpostergacion"><i class="fas fa-cart-plus"></i>POSTERGACIÓN</a>
+                <a class="nav-link text-dark" asp-area="" asp-controller="Postergacion" asp-action="Indexpostergacion"><i class="fas fa-cart-plus"></i>POSTERGACIÓN</a>
+        </li>
+        <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Cancelar" asp-action="IndexCancelar"><i class="fas fa-cart-plus"></i>Cancelacion</a>
+        </li>
+        <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Reclamos" asp-action="IndexReclamos"><i class="fas fa-cart-plus"></i>Reclamos</a>
         </li>
 
         }
