@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\VERSION FINAL HTC\\HotelTuristas-main\\hostal\\hostal.csproj": {}
+    "d:\\VERSION FINAL HTC\\esta-si-funciona\\hostal.csproj": {}
   },
   "projects": {
-    "d:\\VERSION FINAL HTC\\HotelTuristas-main\\hostal\\hostal.csproj": {
+    "d:\\VERSION FINAL HTC\\esta-si-funciona\\hostal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\VERSION FINAL HTC\\HotelTuristas-main\\hostal\\hostal.csproj",
+        "projectUniqueName": "d:\\VERSION FINAL HTC\\esta-si-funciona\\hostal.csproj",
         "projectName": "hostal",
-        "projectPath": "d:\\VERSION FINAL HTC\\HotelTuristas-main\\hostal\\hostal.csproj",
+        "projectPath": "d:\\VERSION FINAL HTC\\esta-si-funciona\\hostal.csproj",
         "packagesPath": "C:\\Users\\Armando\\.nuget\\packages\\",
-        "outputPath": "d:\\VERSION FINAL HTC\\HotelTuristas-main\\hostal\\obj\\",
+        "outputPath": "d:\\VERSION FINAL HTC\\esta-si-funciona\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Armando\\AppData\\Roaming\\NuGet\\NuGet.Config"

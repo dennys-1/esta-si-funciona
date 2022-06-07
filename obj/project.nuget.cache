@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TOTOXq/yZfp2POP3u/p1xzigT65fT2iOKlB7u1XYa/0q/8Mgg4GR3WjT0TW/qqmDPTWYG4EWIbTFqwGtbq0RFg==",
+  "dgSpecHash": "vKCrkL+m6rgTQ33LXIvPSJ4LCcTDonc+SCSxPYUFuFoelf0UWniZqFeZ1LiBG0RQKe7BN8//QvoKEMuhbN5tZw==",
   "success": true,
-  "projectFilePath": "d:\\VERSION FINAL HTC\\HotelTuristas-main\\hostal\\hostal.csproj",
+  "projectFilePath": "d:\\VERSION FINAL HTC\\esta-si-funciona\\hostal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Armando\\.nuget\\packages\\anglesharp\\0.9.9\\anglesharp.0.9.9.nupkg.sha512",
     "C:\\Users\\Armando\\.nuget\\packages\\epplus\\4.5.3.3\\epplus.4.5.3.3.nupkg.sha512",
