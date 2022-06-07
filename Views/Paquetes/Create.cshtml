@@ -1,0 +1,78 @@
+@model hostal.Models.Paquetes
+
+@{
+    ViewData["Title"] = "Create";
+}
+<!--Inicio Banner-->
+<div class="hero-wrap hero-wrap-2" style="background-image: url('../images/banner1.jpg'); background-attachment:fixed; height: 400px;">
+      <div class="overlay" style="height: 400px;" ></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true" style="height: 400px;">
+           <div class="col-md-8 ftco-animate text-center">          
+             <h1 class="mb-3 bread">Registrar Paquete</h1>
+            </div>
+          </div>
+       </div>
+</div>    
+<!--Fin Banner-->
+<br>
+<br>
+<br>
+<div class="container formulario">
+     <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control rounded-pill" placeholder="Escribe Nombre"/>
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fecha" class="control-label"></label>
+                <input asp-for="Fecha" class="form-control rounded-pill" placeholder="Escribe Fecha"/>
+                <span asp-validation-for="Fecha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Producto" class="control-label"></label>
+                <input asp-for="Producto" class="form-control rounded-pill" placeholder="Escribe Producto"/>
+                <span asp-validation-for="Producto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Servicio" class="control-label"></label>
+                <input asp-for="Servicio" class="form-control rounded-pill" placeholder="Escribe Servicio"/>
+                <span asp-validation-for="Servicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripción" class="control-label"></label>
+                <input asp-for="Descripción" class="form-control rounded-pill" placeholder="Escribe Descripción"/>
+                <span asp-validation-for="Descripción" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Precio" class="control-label"></label>
+                <input asp-for="Precio" class="form-control rounded-pill" placeholder="Escribe Precio"/>
+                <span asp-validation-for="Precio" class="text-danger"></span>
+            </div>                            
+            <div class="form-group">
+                <label asp-for="Imagen" class="control-label"></label>
+                <input asp-for="Imagen" class="form-control rounded-pill" value="https://drive.google.com/uc?export=download&id="> 
+                <span asp-validation-for="Imagen" class="text-danger"></span>
+            </div>            
+            <div class="form-group text-left col-sm">
+                <label asp-for="Estado" class="control-label"></label>
+                <select asp-for="Estado" class="form-control rounded-pill" aria-label="Default select example">
+                <option value="Activo">Activo</option>
+                <option value="Inactivo">Inactivo</option>
+                </select>
+                <span asp-validation-for="Estado" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Crear Paquete" class="button" />
+            </div>
+            <br>
+            <div>
+            <a asp-action="Index"><i class="fas fa-arrow-circle-left"></i>Regresar</a>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,336 @@
+@model IEnumerable<hostal.Models.Proformass>
+
+@{
+    ViewData["Title"] = "Carrito";
+    IEnumerable<hostal.Models.Proformass> listProformass = new List<Proformass>();   
+}
+<body>
+<!--Inicio Banner-->
+<div class="hero-wrap hero-wrap-2" style="background-image: url('../images/banner1.jpg'); background-attachment:fixed; height: 400px;">
+      <div class="overlay" style="height: 400px;" ></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true" style="height: 400px;">
+           <div class="col-md-8 ftco-animate text-center">          
+             <h1 class="mb-3 bread">Reservas</h1>
+            </div>
+          </div>
+       </div>
+</div>    
+<!--Fin Banner-->
+<br>
+<br>
+<br>
+
+
+<!----------------------------------PROFORMA HABITACIONES/PRODUCTOS----------------------------------->
+    <br>
+    <hr>
+    <center><h4>HABITACIONES</h4></center>
+    <hr>
+    <br>
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">
+                @Html.DisplayNameFor(model => listProformass.FirstOrDefault().Proforma.Producto.Imagen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listProformass.FirstOrDefault().Proforma.Producto.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listProformass.FirstOrDefault().Proforma.Precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listProformass.FirstOrDefault().Proforma.Quantity)
+            </th>
+             <th>
+                 Subtotal
+             </th>     
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+
+    if(item.Proforma.Producto.Id==0){      
+
+
+    }else{
+        <tr>
+            <td>
+              
+
+                    <img class="img-responsive" width="200" height="150"
+                       src="/images/@item.Proforma.Producto.Imagen" alt="@item.Proforma.Producto.Imagen"  />
+                
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Proforma.Producto.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Proforma.Precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Proforma.Quantity)
+            </td>  
+            <td>
+                @{
+                    decimal subtotal = 0;
+                     var contarsub = 0;
+                    subtotal = item.Proforma.Precio * item.Proforma.Quantity;
+                    contarsub++;
+                }
+                <p>S/. @subtotal</p>
+            </td>          
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-success">Editar</a>
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">Eliminar</a>
+            </td>
+        </tr>
+        }
+}
+    </tbody>
+</table>
+
+    @{
+        decimal totalp = 0;
+        var contarp = 0;
+    }
+    @foreach (var item in Model)
+    {           
+        totalp = totalp + item.Proforma.Precio * item.Proforma.Quantity;
+        contarp++;
+           
+    }
+
+      <p align="center" style="font-size: 200%;">Total S/. @totalp</p>
+
+<!---------------------------------------PROFORMA SERVICIOS---------------------------------------->
+<br>
+    <hr>
+    <center><h4>SERVICIOS</h4></center>
+    <hr>
+    <br>
+    <table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">
+                @Html.DisplayNameFor(model => listProformass.FirstOrDefault().ProformaServi.Servicio.Imagen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listProformass.FirstOrDefault().ProformaServi.Servicio.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listProformass.FirstOrDefault().ProformaServi.Precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listProformass.FirstOrDefault().ProformaServi.Quantity)
+            </th> 
+            <th>
+                 Subtotal
+             </th>              
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+
+    if(item.ProformaServi.Servicio.Id==0){      
+
+
+    }else{
+        <tr>
+            <td>
+               
+
+                    <img class="img-responsive" width="200" height="150"
+                       src="/images/@item.ProformaServi.Servicio.Imagen" alt="@item.ProformaServi.Servicio.Imagen"  />
+                
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProformaServi.Servicio.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProformaServi.Precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProformaServi.Quantity)
+            </td>       
+            <td>
+                @{
+                    decimal subtotals = 0;
+                     var contarsubs = 0;
+                    subtotals = item.ProformaServi.Precio * item.ProformaServi.Quantity;
+                    contarsubs++;
+                }
+                <p>S/. @subtotals</p>
+            </td>      
+            <td>
+                <a asp-action="Edits" asp-route-id="@item.Id" class="btn btn-outline-success">Editar</a>
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">Eliminar</a>
+            </td>
+        </tr>
+    }
+}
+    </tbody>
+</table>
+
+@{
+        decimal totals = 0;
+        var contars = 0;
+    }
+    @foreach (var item in Model)
+    {           
+        totals = totals + item.ProformaServi.Precio * item.ProformaServi.Quantity;
+        contars++;
+           
+    }
+
+      <p align="center" style="font-size: 200%;">Total S/. @totals</p>
+
+<!------------------------------------------TOTAL---------------------------------->
+
+@{
+        decimal totaltotal = 0;
+        var contartotal = 0;
+    }
+    @foreach (var item in Model)
+    {           
+        totaltotal = totalp + totals;
+        contartotal++;
+           
+    }
+<br>
+<hr>
+    <p align="center" style="font-size: 400%;">TOTAL S/. @totaltotal</p>
+
+    
+<hr>
+<div class="container">
+    <div class="section-title">
+          <h2 data-aos="fade-in">Cómo desea pagar?</h2>
+          <h3>Tarjeta</h3>
+          <a class="navbar-brand" asp-area="" asp-controller="pago" asp-action="Create" asp-route-monto="@totaltotal"><img src="/images/image 5.png"></a>
+          <h3>Escanear QR</h3>
+            <a class="navbar-brand" asp-area="" asp-controller="pagoyape" asp-action="Createyape" asp-route-monto="@totaltotal"><img src="/images/descarga 1.png"></a>
+    </div>
+</div>
+
+<!----------------------------------PROFORMA PAQUETES PROMOCIONALES----------------------------------->
+    <br>
+    <hr>
+    <center><h4>PROMOCIONES</h4></center>
+    <hr>
+    <br>
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">
+                @Html.DisplayNameFor(model => listProformass.FirstOrDefault().ProformaPaquetes.Paquetes.Imagen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listProformass.FirstOrDefault().ProformaPaquetes.Paquetes.Nombre)
+            </th>
+           
+            <th>
+                @Html.DisplayNameFor(model => listProformass.FirstOrDefault().ProformaPaquetes.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listProformass.FirstOrDefault().ProformaPaquetes.Precio)
+            </th>
+            
+             <th>
+                 Subtotal
+             </th>     
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+
+    if(item.ProformaPaquetes.Paquetes.Id==0){      
+
+
+    }else{
+        <tr>
+            <td>              
+
+                    <img class="img-responsive" width="200" height="150"
+                       src="@item.ProformaPaquetes.Paquetes.Imagen" alt="@item.ProformaPaquetes.Paquetes.Imagen"  />
+                
+            </td>            
+            <td>
+                @Html.DisplayFor(modelItem => item.ProformaPaquetes.Paquetes.Nombre)
+            </td>
+                       
+            <td>
+                @Html.DisplayFor(modelItem => item.ProformaPaquetes.Quantity)
+            </td>  
+            <td>
+                @Html.DisplayFor(modelItem => item.ProformaPaquetes.Precio)
+            </td>
+            <td>
+                @{
+                    decimal subtotal = 0;
+                     var contarsub = 0;
+                    subtotal = item.ProformaPaquetes.Precio * item.ProformaPaquetes.Quantity;
+                    contarsub++;
+                }
+                <p>S/. @subtotal</p>
+            </td>          
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-success">Editar</a>
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">Eliminar</a>
+            </td>
+        </tr>
+        }
+}
+    </tbody>
+</table>
+
+    @{
+        decimal totalpq = 0;
+        var contarpq = 0;
+    }
+    @foreach (var item in Model)
+    {           
+        totalpq = totalpq + item.ProformaPaquetes.Precio * item.ProformaPaquetes.Quantity;
+        contarpq++;
+           
+    }
+
+      <p align="center" style="font-size: 200%;">Total S/. @totalpq</p>
+
+      <!------------------------------------------TOTAL A PAGAR---------------------------------->
+
+@{
+        decimal totaltotaltotal = 0;
+        var contartotal2 = 0;
+    }
+    @foreach (var item in Model)
+    {           
+        totaltotaltotal = totaltotal + totalpq;
+        contartotal2++;
+           
+    }
+<br>
+<hr>
+    <p align="center" style="font-size: 400%;">TOTAL A PAGAR S/. @totaltotaltotal</p>
+
+    
+<hr>
+<br>
+<hr>
+<div class="container">
+    <div class="section-title">
+          <h2 data-aos="fade-in">Cómo desea pagar?</h2>
+          <h3>Tarjeta</h3>
+          <a class="navbar-brand" asp-area="" asp-controller="pago" asp-action="Create" asp-route-monto="@totaltotaltotal"><img src="/images/image 5.png"></a>
+          <h3>Escanear QR</h3>
+            <a class="navbar-brand" asp-area="" asp-controller="pagoyape" asp-action="Createyape" asp-route-monto="@totaltotaltotal"><img src="/images/descarga 1.png"></a>
+    </div>
+</div>
+</body>
+
+
+

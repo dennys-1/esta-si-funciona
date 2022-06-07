@@ -1,0 +1,59 @@
+@model hostal.Models.Postergacion
+
+@{
+    ViewData["Title"] = "Postergacion";
+}
+<!--Inicio Banner-->
+<div class="hero-wrap hero-wrap-2" style="background-image: url('../images/banner1.jpg'); background-attachment:fixed; height: 400px;">
+      <div class="overlay" style="height: 400px;" ></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true" style="height: 400px;">
+           <div class="col-md-8 ftco-animate text-center">          
+             <h1 class="mb-3 bread">Solicitar postergación</h1>
+            </div>
+          </div>
+       </div>
+</div>    
+<!--Fin Banner-->
+<br>
+<br>
+<br>
+<div class="container formulario">
+     <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control rounded-pill" placeholder="Escribe Nombre"/>
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <label asp-for="Fecha" class="control-label"></label>
+                <input asp-for="Fecha" class="form-control rounded-pill" placeholder="Escribe Fecha de la reserva"/>
+                <span asp-validation-for="Fecha" class="text-danger"></span>
+            </div>
+
+             <div class="form-group">
+                <label asp-for="Motivo" class="control-label"></label>
+                <input asp-for="Motivo" class="form-control rounded-pill" placeholder="Escribe el motivo de postergación"/>
+                <span asp-validation-for="Motivo" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Estado" class="control-label"></label>
+                <input asp-for="Estado" class="form-control rounded-pill" disabled="disabled" value="En revisión"/>
+                <span asp-validation-for="Estado" class="text-danger"></span>
+            </div>
+
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Enviar" class="button" />
+            </div>
+            <br>
+            <div>
+            <a asp-action="Index"><i class="fas fa-arrow-circle-left"></i>Regresar</a>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,82 @@
+@model hostal.Models.Product
+
+@{
+    ViewData["Title"] = "Create";
+}
+<!--Inicio Banner-->
+<div class="hero-wrap hero-wrap-2" style="background-image: url('../images/banner1.jpg'); background-attachment:fixed; height: 400px;">
+      <div class="overlay" style="height: 400px;" ></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true" style="height: 400px;">
+           <div class="col-md-8 ftco-animate text-center">          
+             <h1 class="mb-3 bread">Registrar Habitación</h1>
+            </div>
+          </div>
+       </div>
+</div>    
+<!--Fin Banner-->
+<br>
+<br>
+<br>
+<div class="container formulario">
+     <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control rounded-pill" placeholder="Escribe Nombre"/>
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control rounded-pill" placeholder="Escribe Descripción"/>
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Precio" class="control-label"></label>
+                <input asp-for="Precio" class="form-control rounded-pill" placeholder="Escribe Precio"/>
+                <span asp-validation-for="Precio" class="text-danger"></span>
+            </div>
+            <!--<div class="form-group">
+                <label asp-for="Imagen" class="control-label"></label>
+                <input asp-for="Imagen" class="form-control rounded-pill" placeholder="Escribe Nombre Imagen"/>
+                <span asp-validation-for="Imagen" class="text-danger"></span>
+            </div>-->
+
+                 
+            <div class="form-group">
+                <label asp-for="Imagen" class="control-label"></label>
+                <input asp-for="Imagen" class="form-control rounded-pill" value="https://drive.google.com/uc?export=download&id="> 
+                <span asp-validation-for="Imagen" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control rounded-pill" placeholder="Escribe Fecha"/>
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group text-left col-sm">
+                <label asp-for="Estado" class="control-label"></label>
+                <select asp-for="Estado" class="form-control rounded-pill" aria-label="Default select example">
+                <option value="Disponible">Disponible</option>
+                <option value="Reservado">Reservado</option>
+                </select>
+                <span asp-validation-for="Estado" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Create" class="button" />
+            </div>
+            <br>
+            <div>
+            <a asp-action="Index"><i class="fas fa-arrow-circle-left"></i>Regresar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

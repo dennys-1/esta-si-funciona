@@ -1,0 +1,104 @@
+@model IEnumerable<hostal.Models.Pedidoyape>
+
+@{
+    ViewData["Title"] = "Documento";
+    Layout = "~/Views/Shared/_Impresion.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>DOCUMENTO</title>
+</head>
+<body>
+    
+
+    <center>
+        <div class="col-sm-4">
+            <img width="80%" src="~/images/nombre.png" />
+            <br>
+            <br>
+        </div>        
+   
+
+    <div class="col-sm-8 text-center">
+            <hr>
+            <h1>COMPROBANTE DE PAGO</h1>
+            <hr>
+            <br>
+            <br>
+        </div>
+
+ <div class="container formulario" style="padding: 10%;">
+<!---------------------------------------------------------->  
+    <table class="table table-hover">
+    <thead class="thead-dark">
+        <th scope="col">
+             <h4>Fecha</h4>
+        </th>
+    </thead>   
+    <tbody>
+@foreach (var item in Model) {
+    <tr>
+     <td class="text-center">
+         <h2> @Html.DisplayFor(modelItem => item.pago.PaymentDate) </h2>
+      </td>
+    </tr>
+}
+<!---------------------------------------------------------->
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <th scope="col">
+             <h4>Usuario</h4>
+        </th>
+    </thead>   
+    <tbody>
+@foreach (var item in Model) {
+    <tr>
+     <td class="text-center">
+         <h2> @Html.DisplayFor(modelItem => item.pago.UserID) </h2>
+      </td>
+    </tr>
+}
+<!---------------------------------------------------------->
+<table class="table table-hover">
+    <thead class="thead-dark">
+<th scope="col">
+<h4>Captura</h4>
+</th>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+                <tr>
+                    <td class="text-center">
+                        <h2>@Html.DisplayFor(modelItem => item.pago.Capturayape)</h2>
+
+                    </td>
+                </tr>
+        }
+
+<table class="table table-hover">
+    <thead class="thead-dark">        
+        <th scope="col">
+            <h4> Total</h4>
+        </th>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+    <tr>
+      <td class="text-center">
+         <h2> @Html.DisplayFor(modelItem => item.pago.MontoTotal) </h2>
+      </td>
+    </tr>
+}
+<!---------------------------------------------------------->
+</div>
+
+
+</tbody>
+</table>
+</center>
+</body>
+</html>

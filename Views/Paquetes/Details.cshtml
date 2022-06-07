@@ -1,0 +1,60 @@
+@model hostal.Models.Paquetes
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+<style>
+    a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #ffffff;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    
+
+    .font20 {
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    .justificado {
+        text-align: justify;
+        text- justify: auto;
+    }
+
+    .checked {
+        color: orange;
+    }
+</style>
+<section id="catalogue" class="catalogue section-bg">
+<div class="container">
+<div class="section-title">
+<h2 data-aos="fade-in">Detalles</h2>
+    </div>
+
+    <div class="card" style="border: none;">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img class="card-img-top" style="height: 500px; width: 100%; "
+                        src="@Html.DisplayFor(model => model.Imagen)"
+                        alt="@Html.DisplayFor(model => model.Imagen)" />
+                </div>
+            </div>
+            <div class="col-md-7">
+                <br>
+                <h5 class="card-title">@Html.DisplayFor(model => model.Nombre)</h5>
+                <hr>
+                <ul class="list-unstyled"></ul>
+                  
+                  <h5 class="card-title">@Html.DisplayFor(model => model.Precio)</h5>
+                  
+                </div>
+              </div>
+            </div>
+    </div>

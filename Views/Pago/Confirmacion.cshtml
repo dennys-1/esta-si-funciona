@@ -1,0 +1,23 @@
+@model hostal.Models.Pago
+@{
+    ViewData["Title"] = "Pago";
+}
+<center>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>@ViewData["Message"]</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a asp-action="Documento" target="_blank">GENERAR COMPROBANTE</a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="btn btn-primary button" asp-controller="Home" asp-action="Index">Regresar a Inicio</a>
+
+    
+</center>
