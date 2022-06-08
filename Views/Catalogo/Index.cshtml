@@ -40,8 +40,8 @@
                   </div>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
-                  <p class="card-text">@Html.DisplayFor(modelItem => item.Precio)</p>
+                  <h5 class="card-title">Número: @Html.DisplayFor(modelItem => item.Nombre)</h5>
+                  <p class="card-text">Precio: S/.@Html.DisplayFor(modelItem => item.Precio)</p>
                   <a class="btn btn-success" asp-action="Add" asp-route-id="@item.Id">Reservar</a>
                   <a class="btn btn-success" asp-action="Details" asp-route-id="@item.Id">Detalles</a>
                 </div>
