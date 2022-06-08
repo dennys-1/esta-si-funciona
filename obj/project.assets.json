@@ -12544,19 +12544,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Armando\\.nuget\\packages\\": {}
+    "C:\\Users\\Dennys\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\VERSION FINAL HTC\\esta-si-funciona\\hostal.csproj",
+      "projectUniqueName": "D:\\USMP-2022-1\\SOFTWARE-2\\Nueva carpeta\\PLANNING_POKER\\esta-si-funciona\\hostal.csproj",
       "projectName": "hostal",
-      "projectPath": "d:\\VERSION FINAL HTC\\esta-si-funciona\\hostal.csproj",
-      "packagesPath": "C:\\Users\\Armando\\.nuget\\packages\\",
-      "outputPath": "d:\\VERSION FINAL HTC\\esta-si-funciona\\obj\\",
+      "projectPath": "D:\\USMP-2022-1\\SOFTWARE-2\\Nueva carpeta\\PLANNING_POKER\\esta-si-funciona\\hostal.csproj",
+      "packagesPath": "C:\\Users\\Dennys\\.nuget\\packages\\",
+      "outputPath": "D:\\USMP-2022-1\\SOFTWARE-2\\Nueva carpeta\\PLANNING_POKER\\esta-si-funciona\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Armando\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Dennys\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -12651,7 +12651,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
